@@ -12,33 +12,46 @@
 
 <body>
     <header class="header-sitio contenedor">
-        <a href="index.html">
+        <a id="logo" class="logo" href="index.html">
             <img src="img/logo.png" alt="logo blog de Viajes">
         </a>
+
+        <div class="buscador">
+            <form class="formulario" action="index.html" method="post">
+                  <label for="buscador">
+                      <input type="search" id="buscador" name="buscador" placeholder="Buscar">
+                  </label>
+                  <input type="submit" id="buscar" class="buscador" value="Buscar">
+            </form>
+          </div>
     </header>
 
-    <div class="barra">
-        <div class="colapsar contenedor">
-            <a class="boton" href="#navegacion">
-                <i class="fas fa-caret-square-down"></i>
-            </a>
-        </div>
-        <nav id="navegacion" class="navegacion contenedor">
-
-            <a href="">Inicio</a>
-            <a href="">Nosotros</a>
-            <a href="">Blog</a>
-            <a href="">Tienda</a>
-            <a href="">Contacto</a>
-            <div class="colapsar contenedor">
-                <a href="#"><i class="fas fa-chevron-circle-up"></i></a>
-            </div>
-
+    <div id="navegacion" class="navegacion">
+        <nav id="menu">
+            <ul class="clearfix">
+                <li><a target="_blank" href="#">Inicio</a></li>
+                <li><a href="#">Nosotros</a>
+                  <ul>
+                    <li><a href="#">Mision</a></li>
+                    <li><a href="#">Vision</a></li>
+                    <li><a href="#">Valores</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Blog</a>
+                    <ul>
+                      <li><a href="#">Consejos</a></li>
+                      <li><a href="#">Ciudades</a></li>
+                      <li><a href="#">Promociones</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Tienda</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
         </nav>
     </div>
 
 
-    <div class="contenido-sitio seccion">
+    <div id="contenido" class="contenido-sitio seccion">
 
         <main class="blog">
             <article class="articulo-blog">
@@ -100,7 +113,7 @@
 
         </main>
 
-        <aside class="barra-lateral">
+        <aside id="sidebar" class="barra-lateral">
             <h2>Otros Posts</h2>
             <ul>
                 <li><a href="#">Entrada 1</a></li>
