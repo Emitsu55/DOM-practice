@@ -58,7 +58,8 @@ for(let i = 0; i < enlaces.length; i++){
 }
 
 */
-
+//nodos y sus atributos
+/*
 let enlacesMenu = document.querySelectorAll('#menu ul li a')[3];
 console.log(enlacesMenu.nodeType);
 console.log(enlacesMenu.nodeName);
@@ -67,6 +68,32 @@ console.log(enlacesMenu);
 console.log(enlacesMenu);
 
 enlacesMenu.firstChild.nodeValue = "Home TT"
+*/
+
+//Agregar contenido
+/*
+let siedebar = document.querySelector('#sidebar');
+let nuevoElemento = document.createElement('H1');
+let nuevoTexto = document.createTextNode('Hola Mundo');
+nuevoElemento.appendChild(nuevoTexto);
+siedebar.appendChild(nuevoElemento);
+*/
+
+//Agregar entrada 6
+
+let enlacesSidebar = document.querySelectorAll('#sidebar ul');
+//creando el enlace
+let nuevoEnlace = document.createElement('A');
+nuevoEnlace.setAttribute('href', '#')
+let textoEnlace = document.createTextNode('Entrada 6');
+nuevoEnlace.appendChild(textoEnlace);
+//Creando la lista
+let nuevaLista = document.createElement('LI');
+nuevaLista.appendChild(nuevoEnlace);
+//Insertarlo al UL
+enlacesSidebar[0].appendChild(nuevaLista);
+
+
 
     
   });
