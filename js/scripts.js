@@ -54,7 +54,7 @@ console.log(pruebaDeAll);
 
 let enlaces = document.querySelectorAll('a');
 for(let i = 0; i < enlaces.length; i++){
-  console.log(enlaces[i].innerText);
+  console.log(enlaces[i].innerText); 
 }
 
 */
