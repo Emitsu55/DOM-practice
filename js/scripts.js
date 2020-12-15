@@ -70,7 +70,7 @@ console.log(enlacesMenu);
 enlacesMenu.firstChild.nodeValue = "Home TT"
 */
 
-//Agregar contenido
+//Agregar contenido crear un nodo
 /*
 let siedebar = document.querySelector('#sidebar');
 let nuevoElemento = document.createElement('H1');
@@ -80,7 +80,7 @@ siedebar.appendChild(nuevoElemento);
 */
 
 //Agregar entrada 6
-
+/*
 let enlacesSidebar = document.querySelectorAll('#sidebar ul');
 //creando el enlace
 let nuevoEnlace = document.createElement('A');
@@ -92,10 +92,58 @@ let nuevaLista = document.createElement('LI');
 nuevaLista.appendChild(nuevoEnlace);
 //Insertarlo al UL
 enlacesSidebar[0].appendChild(nuevaLista);
+*/
+
+//clonar un nodo
+/*
+let contenido = document.querySelectorAll('main');
+console.log(contenido);
+
+let nuevoContenido = contenido[0].cloneNode(true);
+let sidebar = document.querySelector('aside');
+sidebar.insertBefore(nuevoContenido, sidebar.childNodes[5]);
+*/
+
+//seccion post mas visitados clonada
+/*
+let sidebar = document.querySelector('aside');
+let masVisitados = document.createElement('H2');
+let textoVisitados = document.createTextNode('Posts mas visitados:');
+masVisitados.appendChild(textoVisitados);
+sidebar.insertBefore(masVisitados, sidebar.childNodes[0]);
+let contenido = document.querySelectorAll('main h2');
+for(let i = 0; i < contenido.length; i++) {
+  let nuevoElemento = document.createElement('LI');
+  let nuevoTexto = document.createTextNode(contenido[i].firstChild.nodeValue);
+  nuevoElemento.appendChild(nuevoTexto);
+  sidebar.insertBefore(nuevoElemento, sidebar.childNodes[1]);
+}
+*/
 
 
+//Eliminar nodos
 
-    
+// let primerPost = document.querySelector('main article');
+
+// primerPost.parentNode.removeChild(primerPost);
+
+// let enlaces = document.querySelectorAll('#navegacion nav ul li a')[10]; //puedo detenrminar eliminar un numero especifico asi
+// enlaces.parentNode.removeChild(enlaces);
+
+//reemplazar nodos
+//reemplazar por nodo existente
+let viejoNodo = document.querySelector('main h2');
+// let nuevoNodo = document.querySelector('footer h2');
+// viejoNodo.parentNode.replaceChild(nuevoNodo, viejoNodo)
+
+//reemplazar por nodo nuevo
+
+let nuevoTitulo = document.createElement('H2');
+let nuevoTexto = document.createTextNode('Hola Mundo');
+nuevoTitulo.appendChild(nuevoTexto);
+viejoNodo.parentNode.replaceChild(nuevoTitulo, viejoNodo)
+
+
   });
   
 })();
